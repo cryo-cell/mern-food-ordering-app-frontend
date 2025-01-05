@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero"
 import Header from "../components/Header"
-import HomePage from "@/pages/HomePage"
 
 type Props = {
   children: React.ReactNode

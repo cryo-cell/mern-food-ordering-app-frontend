@@ -1,14 +1,8 @@
-import landingImage from "../assets/mern-food-ordering-app-course-resources-main/mern-food-ordering-app-course-resources-main/assets/landing.png"
 import appDownloadImage from "../assets/mern-food-ordering-app-course-resources-main/mern-food-ordering-app-course-resources-main/assets/appDownload.png"
-import originalCart from "../assets/originalCart.jpg"
-import finalCart from "../assets/finalCart.jpg"
-import landingFull from "../assets/landingFull.png"
-import finalTwisted from "../assets/finalTwisted.jpg"
-import originalTwisted from "../assets/originalTwisted.jpg"
+
 import originalTarget from "../assets/originalTarget.png"
 import ordersUnsplit from "../assets/ordersUnsplit (1).png"
-import deliveryScreenshot from "../assets/deliveryScreenshot.png"
-import directOrder from "../assets/directOrder.png"
+
 const HomePage = () => {
   return(
     <div className="flex flex-col gap-12">
