@@ -37,11 +37,11 @@ const formSchema = z.object({
 
 type restaurantFormData = z.infer<typeof formSchema>
 
-type Props = {
+/*type Props = {
   onSave: (restaurantFormData: FormData)=> void
     isLoading: boolean;
   
-}
+}*/
 
 const ManageRestaurantForm = () => {
   const form = useForm<restaurantFormData>({
@@ -52,12 +52,12 @@ const ManageRestaurantForm = () => {
     }
   })
 
-  const onSubmit = (formDataJson: restaurantFormData)=> {
+  /*const onSubmit = (formDataJson: restaurantFormData)=> {
     //convert formdatajson to a new formData object
-  }
+  }*/
   return (
     <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}
+        <form 
         className="space-y-8 bg-gray-50 p-10 rounded-lg"
         >
             <DetailsSection/>
