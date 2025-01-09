@@ -30,7 +30,7 @@ const DetailsSection = () => {
         control={control} 
         name="city" 
         render={({field})=> 
-        <FormItem>
+        <FormItem className="flex-1">
             <FormLabel>City</FormLabel>
             <FormControl>
                 <Input {...field} className="bg-white"/>
@@ -44,7 +44,7 @@ const DetailsSection = () => {
         name="country" 
         render={({field})=> 
         <FormItem>
-            <FormLabel>Country</FormLabel>
+            <FormLabel className="flex-1">Country</FormLabel>
             <FormControl>
                 <Input {...field} className="bg-white"/>
             </FormControl>
