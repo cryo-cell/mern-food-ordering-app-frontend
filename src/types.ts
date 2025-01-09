@@ -1,4 +1,4 @@
-import { string } from "zod"
+//import  string  from "zod"
 
 export type User = {
     _id: string
@@ -14,7 +14,7 @@ export type MenuItem = {
     name: string
     price: number
 }
-export type Restaurant= {
+export type Restaurant = {
     _id: string
     user: string
     restaurantName: string
