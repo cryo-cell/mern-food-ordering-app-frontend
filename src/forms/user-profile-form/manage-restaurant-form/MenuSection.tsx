@@ -17,10 +17,11 @@ const MenuSection = () => {
         <FormDescription>
             Create your menu
         </FormDescription>
-    </div>
+    
+
     <FormField control={control} name="menuItems" render= {()=>
         (
-            <FormItem className="flex flex-col gap-2">
+            <FormItem className="flex flex-col gap-2 justify-center items-center">
                 {fields.map((_, index)=>(
                     <MenuItemInput index={index} removeMenuItem = {()=>remove(index)}/>
                 ))}
@@ -30,8 +31,9 @@ const MenuSection = () => {
 
    
    <Button type="button" onClick={()=> append({name: "", price: ""})}>
-
+    Add menu item
    </Button>
+   </div>
   </div>)
 }
 
