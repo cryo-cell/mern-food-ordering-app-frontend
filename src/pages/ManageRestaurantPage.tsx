@@ -2,7 +2,7 @@ import ManageRestaurantForm from "@/forms/user-profile-form/manage-restaurant-fo
 
 const ManageRestaurantPage = () => {
   return(
-    <ManageRestaurantForm />
+    <ManageRestaurantForm isLoading={false} />
   )
 }
 
