@@ -56,24 +56,35 @@ const ManageRestaurantForm = ({onSave, isLoading}: Props) => {
     }
   })
 
-  const onSubmit = (formDataJson: restaurantFormData)=> {
-    //convert formdatajson to a new formData object
+  const onSubmit = (formDataJson: restaurantFormData) => {
     const formData = new FormData();
+
     formData.append("restaurantName", formDataJson.restaurantName);
     formData.append("city", formDataJson.city);
     formData.append("country", formDataJson.country);
-    formData.append("deliveryPrice", (formDataJson.deliveryPrice * 100).toString());
-    formData.append("estimatedDeliveryTime", formDataJson.estimatedDeliveryTime.toString());
-    formDataJson.menuItems.forEach((menuItem, index)=>{
-        formData.append(`menuItems[${index}][name]`,menuItem.name);
-        formData.append(`menuItems[${index}][price]`, (menuItem.price * 100).toString());
-        formData.append(`imageFile`, formDataJson.imageFile);
 
-        onSave(formData)
+    formData.append(
+      "deliveryPrice",
+      (formDataJson.deliveryPrice * 100).toString()
+    );
+    formData.append(
+      "estimatedDeliveryTime",
+      formDataJson.estimatedDeliveryTime.toString()
+    );
+    formDataJson.menuItems.forEach((menuItem: { name: string | Blob; price: number; }, index: number) => {
+      formData.append(`menuItems[${index}][name]`, menuItem.name);
+      formData.append(
+        `menuItems[${index}][price]`,
+        (menuItem.price * 100).toString()
+      );
+    });
 
-    })
+    if (formDataJson.imageFile) {
+      formData.append(`imageFile`, formDataJson.imageFile);
+    }
 
-  }
+    onSave(formData);
+  };
   return (
     <Form {...form}>
         <form 
